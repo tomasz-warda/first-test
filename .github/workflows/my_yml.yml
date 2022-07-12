@@ -11,5 +11,6 @@ jobs:
   
     runs-on: ubuntu-latest
 
-    name: Pytest
-    run: pytest
+    steps:
+    - name: Pytest
+      run: pytest
