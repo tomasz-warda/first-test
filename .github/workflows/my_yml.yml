@@ -1,4 +1,4 @@
-name: My Testt5
+name: Python test run
 
 on:
   push:
