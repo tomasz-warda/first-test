@@ -6,4 +6,4 @@ RUN pip3 install pytest
 
 COPY . .
 
-CMD [ "pytest", "ls -a"]
+CMD [ "pytest", "ls"]
