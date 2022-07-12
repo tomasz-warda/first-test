@@ -1,4 +1,4 @@
 import main
 
 def test_print():
-    assert main.greet() == "Hi"
+    assert main.greet() == "Hi2"
