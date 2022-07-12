@@ -21,4 +21,4 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
     - name: Pytest
-      run: pytest
+      run: python -m pytest
