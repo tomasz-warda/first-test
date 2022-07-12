@@ -1,0 +1,14 @@
+name: My Test
+
+on:
+  push:
+    branches: [ "main" ]
+  
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    - name: Pytest
+      run: pytest
