@@ -26,6 +26,7 @@ jobs:
         name: "Check python --version"
         run: |
             python --version
+            ls
       - 
         name: "Build the Docker image"
         run: |
