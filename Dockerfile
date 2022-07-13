@@ -1,3 +1,5 @@
+ARG img
+
 FROM img
 
 WORKDIR /app
