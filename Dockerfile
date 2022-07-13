@@ -8,6 +8,4 @@ RUN pip3 install mypy
 
 COPY . .
 
-RUN mypy --version
-
-RUN pytest
+CMD [ "bash commands.txt" ]
