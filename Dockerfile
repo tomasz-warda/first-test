@@ -1,4 +1,5 @@
-FROM python:3.8-slim-buster
+ARG version
+FROM python:$version
 
 WORKDIR /app
 
