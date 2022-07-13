@@ -1,3 +1,5 @@
+FROM img
+
 WORKDIR /app
 
 RUN pip3 install pytest
