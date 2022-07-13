@@ -8,7 +8,7 @@ RUN pip3 install mypy
 
 COPY . .
 
-ADD start.sh /
+ADD com.sh /
 
 RUN chmod +x /com.sh
 
