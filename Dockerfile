@@ -2,12 +2,6 @@ FROM fkrull/multi-python:latest
 
 WORKDIR /app
 
-RUN python --version
-
-RUN pip3 install pytest
-
-RUN pip3 install mypy
-
 COPY . .
 
 ADD com.sh /
