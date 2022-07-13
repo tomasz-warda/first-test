@@ -2,7 +2,7 @@ FROM fkrull/multi-python:latest
 
 WORKDIR /app
 
-RUN pip3 install pytest
+RUN pip3 install pytest mypy
 
 COPY . .
 
