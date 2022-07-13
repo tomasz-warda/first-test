@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 WORKDIR /app
 
-RUN python --version
+RUN python3 --version
 
 RUN pip3 install pytest
 
