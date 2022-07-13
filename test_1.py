@@ -4,4 +4,4 @@ def test_print():
     assert main.greet() == "Hi"
 
 def test_not():
-    assert 3 == 3
+    assert 4 == 4
