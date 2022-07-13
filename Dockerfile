@@ -1,4 +1,4 @@
-FROM fkrull/multi-python:latest
+FROM scratch
 
 WORKDIR /app
 
