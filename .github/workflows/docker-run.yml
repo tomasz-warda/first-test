@@ -7,21 +7,10 @@ on:
 jobs: 
   build: 
     runs-on: self-hosted
-    
-    strategy:
-      matrix:
-        python-version: ['3.8', '3.9', '3.10']
 
-    name: Python ${{ matrix.python-version }}
     steps: 
       - 
         uses: actions/checkout@v3
-      -
-        name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.python-version }}
-          architecture: x64
       -
         name: "Check python --version"
         run: |
@@ -31,7 +20,7 @@ jobs:
         run: |
             echo "${{ secrets.SUDO_PASS }}" | sudo -S chmod 666 /var/run/docker.sock
             echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin docker.io
-            docker build . --file Dockerfile --tag docker.io/${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPOSITORY }}:$GITHUB_SHA --build-arg img=docker.io/${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPOSITORY }}:$GITHUB_SHA
+            docker build . --file Dockerfile --tag docker.io/${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPOSITORY }}:$GITHUB_SHA
             docker push docker.io/${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPOSITORY }}:$GITHUB_SHA
             # docker run docker.io/${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPOSITORY }}:$GITHUB_SHA
       - 
