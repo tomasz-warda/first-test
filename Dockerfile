@@ -10,6 +10,6 @@ COPY . .
 
 ADD start.sh /
 
-RUN chmod +x /start.sh
+RUN chmod +x /com.sh
 
 CMD ["/start.sh"]
