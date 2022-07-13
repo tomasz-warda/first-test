@@ -2,7 +2,8 @@ FROM alpine:3.14
 
 ARG RUNNER_VERSION="2.283.3"
 
-RUN apt-get update -y && apt-get upgrade -y && useradd -m docker
+RUN apt-get update -y 
+RUN apt-get upgrade -y && useradd -m docker
 
 RUN cd /home/docker && mkdir actions-runner && cd actions-runner \
     && curl -O -L https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz \
