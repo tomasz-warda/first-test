@@ -8,6 +8,8 @@ RUN pip3 install mypy
 
 COPY . .
 
+ADD start.sh /
+
 RUN chmod +x /start.sh
 
 CMD ["/start.sh"]
