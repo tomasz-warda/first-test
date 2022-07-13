@@ -2,8 +2,6 @@ FROM ubuntu:latest
 
 WORKDIR /app
 
-RUN python3 --version
-
 RUN pip3 install pytest
 
 RUN pip3 install mypy
