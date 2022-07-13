@@ -8,6 +8,4 @@ RUN pip3 install mypy
 
 COPY . .
 
-CMD [ "pytest" ]
-
-CMD [ "mypy", "--version" ]
+CMD [ "mypy", "--version", "pytest" ]
