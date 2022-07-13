@@ -4,6 +4,8 @@ WORKDIR /app
 
 RUN pip3 install pytest
 
+RUN pip3 install mypy
+
 COPY . .
 
-CMD [ "pytest" ]
+CMD [ "pytest", "mypy --version" ]
