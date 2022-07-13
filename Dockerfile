@@ -1,8 +1,8 @@
-ARG img
-
-FROM busybox
+FROM fkrull/multi-python:latest
 
 WORKDIR /app
+
+RUN python --version
 
 RUN pip3 install pytest
 
