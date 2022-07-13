@@ -2,7 +2,7 @@ name: "Docker run"
 
 on:
   push:
-    branches: [ old ]
+    branches: [ local-run ]
 
 jobs: 
   build: 
