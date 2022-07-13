@@ -1,6 +1,6 @@
 ARG img
 
-FROM img
+FROM busybox
 
 WORKDIR /app
 
