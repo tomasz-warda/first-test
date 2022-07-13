@@ -10,7 +10,7 @@ jobs:
     
     strategy:
       matrix:
-        python-version: ['3.x', '2.x']
+        python-version: ['3.8', '3.9', '3.10', '2.7']
 
     name: Python ${{ matrix.python-version }}
     steps: 
