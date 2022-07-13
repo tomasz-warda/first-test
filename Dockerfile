@@ -8,4 +8,4 @@ RUN pip3 install mypy
 
 COPY . .
 
-CMD [ "bash commands.txt" ]
+CMD [ "bash ./commands.txt" ]
