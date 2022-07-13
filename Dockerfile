@@ -1,6 +1,8 @@
-FROM python:3.8-slim-buster
+FROM ubuntu:latest
 
 WORKDIR /app
+
+RUN python --version
 
 RUN pip3 install pytest
 
